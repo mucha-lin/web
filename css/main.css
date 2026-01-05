@@ -3,6 +3,7 @@
 
 :root {
     --standard-color: #E50012;
+    --secondary-color: #FFB200;
     --xs-space: .5rem;
     --s-space: .75rem;
     --r-space: 1rem;
@@ -26,18 +27,23 @@ ol {
 }
 
 p {
-    margin: 0;
+    margin: 0 0 1rem 0;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #6E6E6E;
+}
+
+a:hover {
+    color: var(--standard-color);
 }
 
 h1,
-h2 {
-    margin: 0;
-    line-height: 1.7em;
+h2,
+h3 {
+    margin: var(--r-space) 0;
+    line-height: 1em;
 }
 
 h1 {
@@ -57,7 +63,10 @@ body {
     font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
     margin: 0;
     color: #6E6E6E;
+    text-align: justify;
 }
+
+
 
 .site-header {
     background-color: var(--standard-color);
@@ -142,89 +151,122 @@ body {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-    text-decoration: underline;
+    font-weight: bolder;
+    text-shadow: 1px 1px 7px #000000cf;
+    
 }
+
+
+.pageTit {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
 
 .opening {
     background-color: #E8E0D9;
 }
 
 .card-container {
-    display: grid;
+    display: flex;
     justify-content: center;
     gap: var(--r-space);
-    margin-top: calc(var(--L-space) * -3)
+    margin-top: -10%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
 }
 
 .card {
-    padding: 40px var(--L-space) var(--L-space);
+    padding: var(--s-space);
     display: grid;
-    gap: var(--r-space);
+    gap: var(--s-space);
     background-color: #fff;
     max-width: 284px;
+    flex: 1;
+    align-content: start;
 }
 
 .icon {
     text-align: center;
     display: flex;
     justify-content: center;
+    max-width: 140px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .value .tit {
-    font-size: 1.5rem;
-    line-height: 1.7em;
     color: #000;
     text-align: center;
     font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 0;
 }
 
 .aboutWrap .tit,
 .location .tit {
     text-align: center;
+
 }
 
-.mainCon {
-    padding: var(--L-space);
+.aboutWrap .mainCon {
+    width: 80%;
+    min-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aboutWrap img {
-    max-height: 200px;
+.aboutWrap .img {
+    padding: var(--s-space) var(--L-space);
+}
+
+.img img {
     margin: 0 auto;
-    height: auto;
 }
-
-.inf {
+#headOffice,
+footer .inf {
     display: grid;
     justify-items: start;
     margin-top: var(--L-space);
 }
 
-.location{
-    margin: var(--L-space);
-}
 
-.tel,
-.fax {
-    text-align: right;
+.taiwanMapLink {
+    display: none;
 }
 
 .location {
-    padding: var(--L-space);
+    margin: var(--L-space);
 }
-
 
 .name {
     font-weight: bold;
     color: #000;
 }
 
+.certificationWrap {
+    background-color: var(--standard-color);
+    padding: 0.1px;
+    z-index: 999;
+    position: relative;
+}
+
 .certificationCon {
     display: flex;
-    background-color: var(--standard-color);
     flex-direction: column;
     color: #fff;
     gap: 2rem;
     padding-bottom: 3rem;
+    width: 80%;
+    margin: -4rem auto 0 auto;
 }
 
 .titWrap {
@@ -244,18 +286,18 @@ body {
 
 .certification_tit {
     border-top: 5px solid var(--standard-color);
-    margin: -27px 0 7rem 0;
+    margin: -18px 0 7rem 0;
 }
 
-.iso {
-    width: 80%;
-    margin: -4rem auto 2rem auto;
-}
 
 .itemName br {
     display: none;
 }
 
+
+.img.iso {
+    margin: -4rem auto 0 auto;
+}
 
 .iso img {
     box-shadow: #0000001c 4px 6px 10px 5px;
@@ -264,11 +306,12 @@ body {
 .itemName {
     font-size: 1.5rem;
     line-height: 1.7em;
-    margin-top: var(--XL-space);
+    margin-bottom: var(--XL-space);
     text-align: center;
 }
 
-.yushan {
+.iso.img,
+.yushan.img {
     width: 80%;
     margin: 0 auto;
 }
@@ -277,6 +320,11 @@ footer {
     padding: var(--L-space);
     background-color: #000;
     color: #fff;
+    text-align: left;
+}
+
+footer p {
+    margin-bottom: .5rem;
 }
 
 footer h2 {
@@ -295,17 +343,166 @@ footer a {
     margin-right: 1rem;
 }
 
-.companyInfs{
-    margin: var(--L-space);
+.companyInfs {
+    margin: var(--L-space) 0;
 }
 
-.logo img{
+.logo img {
     margin: 0 auto;
 }
 
 .companyInfs .inf {
     width: fit-content;
     margin: var(--L-space) auto;
+}
+
+.container.about {
+    background: url(../images/about_bg.png) top no-repeat;
+    padding-top: 1px;
+    background-size: contain;
+}
+
+.mainImg {
+    margin-bottom: var(--L-space);
+    padding: 0 25%;
+}
+
+.aboutTit.videoTit,
+.aboutTit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin-bottom: var(--L-space);
+    line-height: 1em;
+}
+
+.youtubeWrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 784px;
+    margin: 0 auto;
+}
+
+.youtube-rwd {
+    position: relative;
+    height: 0;
+    padding: 0 0 56.25% 0;
+    overflow: auto;
+}
+
+.youtube-rwd iframe,
+.youtube-rwd object,
+.youtube-rwd embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.certifications p {
+    margin: var(--XL-space) 0;
+    color: #000;
+    text-align: center;
+}
+
+
+.iso img,
+.yushan img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.photos {
+    display: grid;
+    gap: var(--r-space);
+}
+
+.prodIcon img {
+    margin: 0 auto;
+}
+
+h3.prodClassName {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--secondary-color)
+}
+
+.prodList a:hover {
+    color: var(--standard-color);
+}
+
+.product_page,
+.product_list {
+    background-color: #D9D9D9;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+}
+
+.product_list .mainCon {
+    display: flex;
+    /* flex-flow: column; */
+    gap: var(--L-space);
+    margin: 0 var(--L-space);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prodCalssCard {
+    background: #fff;
+    border-radius: var(--xs-space);
+    padding: var(--L-space);
+    width: 80%;
+    max-width: 300px;
+    min-width: 280px;
+    /* margin: 0 auto; */
+}
+
+.prodIcon {
+    width: 32.22%;
+    margin: 1rem auto 0 auto;
+    min-width: 70px;
+    max-width: 120px;
+}
+
+/* @media (min-width: 550px) {
+
+    .companyInfs {
+        display: flex;
+    }
+
+} */
+
+.breadCrumb {
+    padding: var(--r-space);
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
+.productPages {
+    padding: var(--r-space);
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.functionBar {
+    text-align: center;
+    margin-bottom: var(--L-space);
+}
+
+.function {
+    border: 1px solid #F53A31;
+    color: #E50012;
+    padding: 10px;
+    display: inline-block;
+    margin: 1em 5px 1em 5px;
+}
+
+.function:hover {
+    background: #E50012;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -341,4 +538,696 @@ footer a {
         gap: 1.5rem;
         padding: 0;
     }
+
+    main.about {
+        background: url(../images/about_main_bg.svg) left center no-repeat;
+        background-position: 0 50%;
+        background-attachment: fixed;
+        background-size: 50%;
+    }
+
+    .card-container {
+        min-width: 736px;
+    }
+
+    .card {
+        padding: var(--r-space);
+    }
+
+    .icon {
+        width: 60%;
+    }
+
+    .aboutWrap .mainCon {
+        flex: 7;
+    }
+
+    .aboutWrap {
+        display: flex;
+        max-width: 1070px;
+        min-width: 680px;
+        width: 85%;
+        margin: var(--XL-space) auto;
+        padding-left: 0;
+        padding-right: 0;
+        gap: var(--XL-space)
+    }
+
+    .aboutWrap p {
+        margin-bottom: var(--r-space);
+    }
+
+    .aboutWrap .tit {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .opening {
+        padding-bottom: var(--L-space);
+    }
+
+    .value .tit {
+        font-size: 1.5rem;
+    }
+
+    .aboutWrap .img {
+        margin-top: 3rem;
+        padding: 0;
+        /* background:radial-gradient(ellipse at center,transparent 0 ,transparent 20%,  #FFC8CC 20%, #FFC8CC 100%); */
+        width: 100%;
+        height: 100%;
+        flex: 4;
+        position: relative;
+
+    }
+
+    .aboutWrap .img img {
+        z-index: 9;
+        position: relative;
+    }
+
+    .aboutWrap .img::after {
+        content: " ";
+        display: block;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: #FFC8CC;
+        position: absolute;
+        top: -5%;
+        left: 19%;
+        z-index: 0;
+        padding: 40%;
+
+    }
+
+    .location {
+        margin-top: var(--XL-space);
+    }
+
+    .location .tit {
+        margin-bottom: var(--XL-space);
+
+    }
+
+    footer .tel,
+    footer .fax {
+        text-align: right;
+    }
+
+    .aboutLink {
+        margin-left: auto;
+        width: fit-content;
+        display: block;
+        font-size: 1.5em;
+    }
+
+
+    .certification {
+        width: 100%;
+        overflow: hidden
+    }
+
+    .certificationLayOut_1 {
+        margin-top: 100px;
+        margin-left: calc(((100% - ((80% * 0.55) + 160px)) * 0.5) + (80% * 0.55));
+        margin-right: auto;
+        width: 45%;
+    }
+
+    .certificationLayOut_1,
+    .certificationLayOut_2 {
+        max-width: 1184px;
+    }
+
+    .certificationLayOut_2 {
+        margin: -100px auto 0 calc((100% - ((80% * 0.55) + 160px)) * 0.5);
+        z-index: 999;
+        position: relative;
+    }
+
+    .certificationCon {
+        display: flex;
+        row-gap: var(--r-space);
+        column-gap: var(--XL-space);
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 55%;
+        margin-left: 0;
+    }
+
+    .certification .tit {
+        margin-left: 0;
+    }
+
+    .itemName {
+        text-align: left;
+        line-height: 1.5em;
+        padding: 0;
+    }
+
+    .iso.itemName {
+        order: 1;
+        width: calc((100% - var(--XL-space)) * 0.4)
+    }
+
+    .yushan.itemName {
+        order: 2;
+        width: calc((100% - var(--XL-space)) * 0.6)
+    }
+
+    .yushan.img {
+        aspect-ratio: 1 / 1;
+        width: calc((100% - var(--XL-space)) * 0.6)
+    }
+
+    .iso.img {
+        width: calc((100% - var(--XL-space)) * 0.4)
+    }
+
+    .iso.img,
+    .yushan.img {
+        margin-top: 0em;
+        padding: 0 0px;
+    }
+
+    .iso.img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .yushan.img img {
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .itemName span {
+        display: inline-block;
+    }
+
+    .certificationWrap {
+        margin-top: -100px;
+    }
+
+    /*---------------------首頁中段地圖---------------------*/
+
+    .taiwanMapLink {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* .taiwanMap {
+        background: url(../images/taiwan.svg) no-repeat center;
+        margin: 140px auto;
+        width: 578px;
+        aspect-ratio: 1 / 1;
+        position: relative;
+    }*/
+
+    .maplocation {
+        position: absolute;
+        /* background-color: #6e6e6e41; */
+    }
+
+    .maplocation img {
+        display: inline-block;
+        display: none;
+    }
+
+    .maplocation i,
+    .locationIocns {
+        display: none;
+    }
+
+    .maplocation .fa-location-dot {
+        color: #A83841;
+    }
+
+    .newTaipeiPoint {
+        width: 37%;
+        height: 19%;
+        right: 0;
+        top: 4%;
+    }
+
+    .taoyuanPoint {
+        width: 38%;
+        height: 22%;
+        left: 18%;
+        top: 0px;
+    }
+
+    .headOfficePoint {
+        width: 41%;
+        height: 31%;
+        left: 2%;
+        top: 11%;
+    }
+
+    .taichangPoint {
+        width: 44%;
+        height: 12%;
+        left: 2%;
+        top: 33%;
+    }
+
+    .tainanPoint {
+        width: 37%;
+        height: 20%;
+        left: 0%;
+        top: 49%;
+    }
+
+    .kaohsiungPoint {
+        width: 40%;
+        height: 15%;
+        left: 0%;
+        bottom: 18%;
+        top: auto;
+    }
+
+    .taichangPoint .fa-location-dot,
+    .kaohsiungPoint .fa-location-dot {
+        margin-top: 17px;
+    }
+
+    .contactLink {
+        margin-left: auto;
+        margin-top: var(--s-space);
+        font-size: 1.5rem;
+    }
+
+    footer .inf {
+        width: fit-content;
+    }
+
+    .inf p {
+        margin-bottom: 0;
+    }
+
+    .inf .name {
+        font-size: 1.75rem;
+        margin-bottom: .75em;
+    }
+
+    .inf.newTaipei,
+    .inf.taoyuan,
+    .inf.taichang,
+    .inf.tainan,
+    .inf.kaohsiung {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: var(--xs-space);
+        box-shadow: #00000030 2px 2px 9px 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 280px;
+    }
+
+    .newTaipei {}
+
+    .taoyuan {
+        top: 0;
+        left: 0;
+    }
+
+    .taichang {
+        top: 0;
+        left: 0;
+    }
+
+    .tainan {
+        top: 0;
+        left: 0;
+    }
+
+    .kaohsiung {
+        top: 0;
+        left: 0;
+    }
+
+    .headOffice {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .headOffice br {
+        display: none;
+    }
+
+    .headOffice .name {
+        display: none;
+    }
+
+    .headOfficeImg {
+        margin-bottom: var(--s-space);
+        width: 45%;
+    }
+
+    .service_locations {
+        position: relative;
+        width: fit-content;
+        margin: 5rem auto 8rem auto;
+    }
+
+    .locationIocns {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .locationIocns i {
+        position: absolute;
+        color: #A83841;
+    }
+
+    .locationIocns i:hover {
+        color: #E50012;
+    }
+
+    .fa-solid.newTaipei {
+        top: 20%;
+        right: 35%;
+    }
+
+    .fa-solid.taoyuan {
+        top: 19.8%;
+        left: 54.5%;
+    }
+
+    .fa-solid.taichang {
+        top: 39.5%;
+        left: 43.7%;
+    }
+
+    .fa-solid.headOffice {
+        top: 38.4%;
+        left: 41.5%;
+    }
+
+    .fa-solid.tainan {
+        top: 66%;
+        left: 36%;
+    }
+
+    .fa-solid.kaohsiung {
+        top: 74%;
+        left: 38.2%;
+    }
+
+    /*---------------------首頁中段地圖END---------------------*/
+
+    footer .container {
+        display: flex;
+        align-items: flex-end;
+        max-width: 1184px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .productsListWrap,
+    .companyInfs {
+        flex: 1;
+    }
+
+    .companyInfs .inf br {
+        display: none;
+    }
+
+    .productsListWrap h2 {
+        text-align: center;
+
+    }
+
+    .productsListWrap {
+        margin-bottom: calc(var(--L-space)*2);
+        max-width: 472px;
+    }
+
+    .productsList {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+    }
+
+    .productsList p {
+        margin-right: 0;
+        width: fit-content;
+
+    }
+
+    .mainImg {
+        padding: 0;
+
+    }
+
+    .pageTit,
+    .aboutTit.videoTit,
+    .aboutTit {
+        margin: calc(2 * var(--XL-space)) 0 var(--XL-space) 0;
+    }
+
+    .about .mainCon {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        gap: var(--XL-space);
+        max-width: 1184px;
+    }
+
+    .mainImg.img {
+        flex: 1;
+    }
+
+    .mainImg.img img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .about .mainCon .con {
+        flex: 3;
+    }
+
+    .about_section {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1184px;
+    }
+
+    .certifications {
+        display: flex;
+        gap: calc(var(--XL-space)*1.5);
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .certifications .iso {
+        flex: 1;
+    }
+
+    .certifications .yushan {
+        flex: 1.45;
+        margin-right: -3%;
+    }
+
+    .photos.collaboration {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photos.production_line {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0;
+    }
+
+    .about_section.section_4 {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+
+    }
+
+    .product_list .mainCon {
+        width: 90%;
+        min-width: 720px;
+        max-width: 1184px;
+        margin: 0 auto;
+    }
+
+    .prodList ul {
+        padding-inline-start: 1.5rem;
+        margin-top: 0;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+
+    :root {
+        --XL-space: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+
+    .card {
+        gap: var(--L-space);
+        padding: var(--L-space);
+    }
+
+    .aboutWrap {
+        min-width: 870px;
+        gap: 8%;
+    }
+
+    .aboutWrap .mainCon {
+        flex: 4.6;
+    }
+
+    .aboutWrap .img {
+        flex: 3.5;
+    }
+
+    .headOffice br {
+        display: inline-block
+    }
+
+    .certificationLayOut_1 h1.tit {
+        font-size: 2.5rem;
+    }
+
+    .certificationLayOut_1 h1.tit span {
+        font-size: 3rem;
+    }
+
+
+    .certificationLayOut_1 {
+        margin-left: calc(((100% - ((80% * 0.55) + 232px)) * 0.5) + (80% * 0.55));
+    }
+
+
+    .certificationLayOut_2 {
+        margin: -100px auto 0 calc((100% - ((80% * 0.55) + 232px)) * 0.5);
+    }
+
+    main.about {
+        background-position: 0 70%;
+        background-size: 50%;
+    }
+
+    .product_list .mainCon {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--r-space);
+        margin-bottom: var(--XL-space);
+    }
+
+    .prodCalssCard {
+        max-width: none;
+        width: auto;
+        display: flex;
+        flex-flow: column;
+    }
+
+}
+
+@media (min-width: 1184px) {
+    .nav-bar {
+        width: 91.89%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@media (min-width: 1480px) {
+    .certificationLayOut_1 {
+        margin-left: calc(((100% - ((80% * 0.55) + 232px)) * 0.5) + (1184px * 0.55))
+    }
+
+    .pageTit,
+    .aboutTit.videoTit,
+    .aboutTit {
+        font-size: 2.75rem;
+    }
+
+    .about_section.section_2 {
+        display: flex;
+        align-items: center;
+        margin-top: calc(var(--XL-space)*4);
+    }
+
+    .about_section .aboutTit {
+        flex: 1;
+    }
+
+    .about_section .certifications {
+        flex: 1;
+    }
+
+    main.about {
+        background-position: left calc((100vh - 85px)*0.2);
+        background-size: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .value.card-container .card .icon {
+        width: 80%;
+        max-width: 80px;
+        margin: 0 auto;
+
+    }
+
+    .value.card-container .card .con {
+        display: none;
+    }
+
+    .about_section,
+    .about .mainCon,
+    .aboutWrap .mainCon {
+        padding: var(--L-space);
+    }
+
+
+    .aboutWrap img {
+        max-height: 200px;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    /*---------------------首頁中段地圖---------------------*/
+
+    .taiwanMap,
+    .locationIocns,
+    .headOfficeImg {
+        display: none;
+    }
+
+    .service_locations {
+        width: 80%;
+        max-width: 450px;
+        min-width: 290px;
+    }
+
+    /*---------------------首頁中段地圖 END---------------------*/
 }

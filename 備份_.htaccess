@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c> 
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^(www.)?sheepy.tw$ 
+RewriteCond %{REQUEST_URI} !^/blog/ 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /blog/$1 
+RewriteCond %{HTTP_HOST} ^(www.)?sheepy.tw$ 
+RewriteRule ^(/)?$ blog/index.php [L] 
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

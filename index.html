@@ -22,13 +22,13 @@
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
-            <div class="logo-slot" aria-label="LOGO位置"><img src="images/loag_white.svg"></div>
+            <div class="logo-slot" aria-label="LOGO位置"><a href="index.html"><img src="images/loag_white.svg"></a></div>
             <nav class="nav-links" id="mainMenu">
                 <ol>
-                    <li><a href="#">回首頁</a></li>
-                    <li><a href="#">關於台消</a></li>
-                    <li><a href="#">產品介紹</a></li>
-                    <li><a href="#">關於我們</a></li>
+                    <li><a href="index.html">回首頁</a></li>
+                    <li><a href="about.html">關於台消</a></li>
+                    <li><a href="product_list.html">產品介紹</a></li>
+                    <li><a href="mailto:teelight@ms43.hinet.net">聯絡我們</a></li>
                 </ol>
             </nav>
         </div>
@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="value card-container">
                     <div class="card">
-                        <div class="icon"><img src="images/index_icon_01.svg"></div>
+                        <div class="icon"><img src="images/index_icon_01.svg" width="150" height="150"></div>
                         <p class="tit">安心</p>
                         <div class="con">
                             惟有不斷求新求變的消防滅火設備才是您安心保平安的基本要件
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="icon"><img src="images/index_icon_02.svg"></div>
+                        <div class="icon"><img src="images/index_icon_02.svg" width="150" height="150"></div>
                         <p class="tit">誠信</p>
                         <div class="con">
                             秉持永續服務的企業管理精神，以提升市場競爭力。
@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="icon"><img src="images/index_icon_03.svg"></div>
+                        <div class="icon"><img src="images/index_icon_03.svg" width="150" height="150"></div>
                         <p class="tit">服務</p>
                         <div class="con">
                             本公司銷售據點，遍及北、中、南，以服務廣大的客戶群。
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="card">
-                        <div class="icon"><img src="images/index_icon_04.svg"></div>
+                        <div class="icon"><img src="images/index_icon_04.svg" width="150" height="150"></div>
                         <p class="tit">品質</p>
                         <div class="con">
                             本公司緊急照明燈及出口、避難方向指示燈，具備ISO9001:2015品質管理驗證系統，各式消防設備亦經消防認證通過。
@@ -78,10 +78,10 @@
                         <p>台中消防企業股份有限公司成立於1973年，專門生產廣泛系列的消防器材，以優良產品與誠信服務享譽國內及海外的市場。讓人們遠離災害，一直是我們的責任、理想和目的。</p>
                         <p>
                             現在的台灣到處可見摩天大樓、高樓大廈，因此，火警安全防護設備比從前更受到加倍重視，台中消防多年來秉持著良心及服務的精神來降低災難的發生。</p>
+                        <a class="aboutLink" href="about.html">閱讀更多</a>
                     </div>
                     <div class="img">
                         <img src="images/index_inter.png">
-
                     </div>
                 </div>
             </div>
@@ -89,67 +89,109 @@
         <div class="location">
             <div class="container">
                 <h1 class="tit">全國服務據點</h1>
-                <div class="inf">
-                    <p class="name">台中總公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台中市烏日區中山路三段1349號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-23363908<br>
-                        04-23384908</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-23383756<br>
-                        04-23362082</p>
-                    <p class="mail"><i class="fa-solid fa-envelope"></i>&ensp;E-mail: teelight@ms43.hinet.net</p>
-                </div>
+                <div class="service_locations">
+                    <div class="taiwanMapLink">
+                        <div class="maplocation newTaipeiPoint" data-contact="newTaipei">
+                            <i class="fa-solid fa-location-dot"></i><img src="images/new_taipei.png">
+                        </div>
+                        <div class="maplocation taoyuanPoint" data-contact="taoyuan">
+                            <img src="images/taoyuan.png"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="maplocation headOfficePoint">
+                            <img src="images/taichung_headquarters.png"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="maplocation taichangPoint" data-contact="taichang">
+                            <img src="images/taichung_branch.png"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="maplocation tainanPoint" data-contact="tainan">
+                            <img src="images/tainan.png"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="maplocation kaohsiungPoint" data-contact="kaohsiung">
+                            <img src="images/kaohsiung.png"><i class="fa-solid fa-location-dot"></i>
+                        </div>
+                    </div>
+                    <div class="taiwanMap">
+                        <img src="images/service_locations.png">
+                    </div>
+                    <div class="locationIocns">
+                        <i class="fa-solid fa-location-dot newTaipei"></i>
+                        <i class="fa-solid fa-location-dot taoyuan"></i>
+                        <i class="fa-solid fa-location-dot taichang"></i>
+                        <i class="fa-solid fa-location-dot headOffice"></i>
+                        <i class="fa-solid fa-location-dot tainan"></i>
+                        <i class="fa-solid fa-location-dot kaohsiung"></i>
+                    </div>
 
-                <div class="inf">
-                    <p class="name">新北分公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;新北市板橋區信義路一巷26弄40號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 02-89670159</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 02-89670169</p>
-                </div>
+                    <div id="headOffice" class="inf headOffice">
+                        <div class="headOfficeImg">
+                            <img src="images/building.svg">
+                        </div>
+                        <p class="name">台中總公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台中市烏日區中山路三段1349號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-23363908<br>
+                            04-23384908</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-23383756<br>
+                            04-23362082</p>
+                        <p class="mail"><i class="fa-solid fa-envelope"></i>&ensp;E-mail: teelight@ms43.hinet.net</p>
+                        <a class="contactLink" href="mailto:teelight@ms43.hinet.net">➜聯絡我們</a>
+                    </div>
 
-                <div class="inf">
-                    <p class="name">桃園分公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;桃園市龜山區龍壽里東萬壽路656號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 03-3293099</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 03-3293008</p>
-                </div>
+                    <div id="newTaipei" class="inf newTaipei">
+                        <p class="name">新北分公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;新北市板橋區信義路一巷26弄40號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 02-89670159</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 02-89670169</p>
+                    </div>
 
-                <div class="inf">
-                    <p class="name">台中分公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台中市南區德富路136號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-22610239</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-22610243</p>
-                </div>
+                    <div id="taoyuan" class="inf taoyuan">
+                        <p class="name">桃園分公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;桃園市龜山區龍壽里東萬壽路656號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 03-3293099</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 03-3293008</p>
+                    </div>
 
-                <div class="inf">
-                    <p class="name">台南分公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台南市永康區竹林街26號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 06-2539649</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 06-2539746</p>
-                </div>
+                    <div id="taichang" class="inf taichang">
+                        <p class="name">台中分公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台中市南區德富路136號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-22610239</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-22610243</p>
+                    </div>
 
-                <div class="inf">
-                    <p class="name">高雄分公司</p>
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;高雄市仁武區鳳仁路369巷8號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 07-3720409</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX:07-3720384</p>
+                    <div id="tainan" class="inf tainan">
+                        <p class="name">台南分公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台南市永康區竹林街26號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 06-2539649</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 06-2539746</p>
+                    </div>
+
+                    <div id="kaohsiung" class="inf kaohsiung">
+                        <p class="name">高雄分公司</p>
+                        <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;高雄市仁武區鳳仁路369巷8號</p>
+                        <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 07-3720409</p>
+                        <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX:07-3720384</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="certification">
             <div class="container">
                 <div class="titWrap">
-                    <h1 class="tit">獲獎與認證</h1>
+                    <div class="certificationLayOut_1">
+                        <h1 class="tit"><span>獲獎</span>與<span>認證</span></h1>
+                    </div>
                     <hr class="certification_tit">
                 </div>
-                <div class="certificationCon">
-                    <div class="iso">
-                        <div class="img"><img src="images/certificate_.jpg"></div>
-                        <p class="itemName">ISO9001:<br>2015</p>
-                    </div>
-                    <div class="yushan">
-                        <div class="img"><img src="images/yushan_trophy.png"></div>
-                        <p class="itemName">第22屆<br>
-                            國家品牌玉山獎</p>
+                <div class="certificationWrap">
+                    <div class="certificationLayOut_2">
+                        <div class="certificationCon">
+                            <div class="iso img"><img src="images/certificate_.jpg"></div>
+                            <p class="iso itemName"><span>ISO9001:</span><span>2015</span></p>
+                            <div class="yushan img"><img src="images/yushan_trophy.png"></div>
+                            <p class="yushan itemName">
+                                <span>第22屆</span>
+                                <span>國家品牌玉山獎</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,7 +199,7 @@
     </main>
     <footer>
         <div class="container">
-            <div class="products">
+            <div class="productsListWrap">
                 <h2>所有產品</h2>
                 <div class="productsList">
                     <p><a href="#">滅火設備</a></p>
@@ -174,10 +216,11 @@
             <div class="companyInfs">
                 <div class="logo"><img src="images/logo_anti.svg"></div>
                 <div class="inf">
-                    <p class="add"><i class="fa-solid fa-location-dot"></i>&ensp;台中市烏日區中山路三段1349號</p>
-                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-23363908；04-23384908</p>
-                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-23383756；04-23362082</p>
-                    <p class="mail"><i class="fa-solid fa-envelope"></i>&ensp;E-mail: teelight@ms43.hinet.net</p>
+                    <p class="tel"> <i class="fa-solid fa-phone"></i>&ensp;TEL: 04-23363908 &ensp; 04-23384908</p>
+                    <p class="fax"> <i class="fa-solid fa-fax"></i>&ensp;FAX: 04-23383756 &ensp; 04-23362082</p>
+                    <p class="add"><i class="fa-solid fa-location-dot">&ensp;</i>地址：台中市烏日區中山路三段1349號</p>
+                    <p class="mail"><i class="fa-solid fa-envelope"></i>&ensp;E-mail: <a
+                            href="mailto:teelight@ms43.hinet.net">teelight@ms43.hinet.net</a></p>
                 </div>
 
             </div>
