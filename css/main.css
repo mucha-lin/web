@@ -153,7 +153,7 @@ body {
 .nav-links a:focus-visible {
     font-weight: bolder;
     text-shadow: 1px 1px 7px #000000cf;
-    
+
 }
 
 
@@ -231,6 +231,7 @@ body {
 .img img {
     margin: 0 auto;
 }
+
 #headOffice,
 footer .inf {
     display: grid;
@@ -489,7 +490,8 @@ h3.prodClassName {
 
 .functionBar {
     text-align: center;
-    margin-bottom: var(--L-space);
+    margin-top: var(--L-space);
+    margin-bottom: var(--XL-space);
 }
 
 .function {
@@ -503,6 +505,22 @@ h3.prodClassName {
 .function:hover {
     background: #E50012;
     color: #fff;
+}
+
+
+.product-nav {
+    display: flex;
+    max-width: 1024px;
+    width: 80%;
+    min-width: 300px;
+    justify-content: space-between;
+    margin: var(--XL-space) auto;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+    cursor: default;
 }
 
 @media (min-width: 768px) {
@@ -1230,4 +1248,29 @@ h3.prodClassName {
     }
 
     /*---------------------首頁中段地圖 END---------------------*/
+}
+
+
+/*---------------------列印---------------------*/
+@media print {
+    body * {
+        /* visibility: hidden !important; */
+    }
+
+    .print-only, .print-only * {
+        visibility: visible !important;
+    }
+
+    .print-only {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .print-only img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
