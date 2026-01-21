@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         f: 1,
         g: 4,
         h: 2,
-        i: 4
+        i: 5
     };
 
     generateBreadcrumb(currentCategory);
